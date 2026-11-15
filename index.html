@@ -417,26 +417,18 @@
 
       .video-card {
         position: relative;
-        min-height: min(65vw, 650px);
+        aspect-ratio: 16 / 9;
         overflow: hidden;
         border: 1px solid var(--line);
-        background:
-          linear-gradient(120deg, rgba(17, 18, 15, 0.22), rgba(17, 18, 15, 0.88)),
-          url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85") center / cover;
-      }
-
-      .video-card::before {
-        position: absolute;
-        inset: 18px;
-        border: 1px solid rgba(245, 242, 234, 0.3);
-        content: "";
-        pointer-events: none;
+        background: #000;
       }
 
       .video-embed {
+        position: absolute;
+        inset: 0;
         display: block;
         width: 100%;
-        min-height: min(65vw, 650px);
+        height: 100%;
         border: 0;
         background: #000;
       }
@@ -1552,12 +1544,6 @@
       .recommendation,
       .contact { background: var(--panel); }
 
-      .video-card {
-        background:
-          linear-gradient(120deg, rgba(8, 19, 33, 0.2), rgba(8, 19, 33, 0.9)),
-          url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85") center / cover;
-      }
-
       .contact {
         background: var(--panel);
         color: var(--ink);
@@ -1604,11 +1590,6 @@
         .experience-item > * { overflow-wrap: anywhere; }
         .experience-impact { text-align: left; }
         .scroll-link { margin-top: 28px; }
-        .video-card { min-height: 500px; }
-        .video-copy { inset: auto 28px 28px; }
-        .video-meta { top: 28px; left: 28px; }
-        .video-card::before { inset: 12px; }
-        .play { width: 68px; height: 68px; }
         .recommendations-heading,
         .experiments-heading { display: block; }
         .recommendations-heading p,
